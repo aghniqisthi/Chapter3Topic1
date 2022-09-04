@@ -1,9 +1,9 @@
-package com.example.chapter3topic1
+package com.example.chapter3topic1.topic1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_bmi.*
+import com.example.chapter3topic1.R
 import kotlinx.android.synthetic.main.activity_penjumlahan.*
 import kotlinx.android.synthetic.main.activity_penjumlahan.btnBack
 import kotlinx.android.synthetic.main.activity_penjumlahan.btnReset
@@ -14,9 +14,9 @@ class PenjumlahanActivity : AppCompatActivity() {
         setContentView(R.layout.activity_penjumlahan)
 
         btnHasil.setOnClickListener{
-            var angka1 = editAngka1.text.toString().toInt()
-            var angka2 = editAngka2.text.toString().toInt()
-            var hasil = angka1 + angka2
+            val angka1 = editAngka1.text.toString().toInt()
+            val angka2 = editAngka2.text.toString().toInt()
+            val hasil = angka1 + angka2
             textViewHasil.text = "Hasil $angka1 + $angka2 = $hasil"
 
             if(hasil > 100) textViewHasilKondisi.text = "Hasil lebih Dari 100"
@@ -28,7 +28,7 @@ class PenjumlahanActivity : AppCompatActivity() {
         }
 
         btnBack.setOnClickListener {
-            var pindah = Intent(this, MainActivity ::class.java)
+            val pindah = Intent(this, Topic1MainActivity ::class.java)
             startActivity(pindah)
         }
     }

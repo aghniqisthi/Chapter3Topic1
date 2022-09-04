@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Chapter 3 Topic 1</string>
+    <string name="title_main">TUGAS</string>
+    <string name="title_main_topic1">TUGAS CHAPTER 3 TOPIC 1</string>
+    <string name="title_main_topic2">TUGAS CHAPTER 3 TOPIC 2</string>
+    <string name="txtbutton_main1_jumlah">Latihan 1 - Penjumlahan</string>
+    <string name="txtbutton_main1_bmi">Tugas 1 - Kalkulator BMI</string>
+    <string name="txtbutton_main1_nilai">Tugas 2 - Nilai Akhir Mahasiswa</string>
+    <string name="title_topic1_bmi">KALKULATOR BMI</string>
+    <string name="title_topic1_nilai">MENGHITUNG NILAI AKHIR MAHASISWA</string>
+
+    <string name="txt_bmi_umur">Umur                  :</string>
+    <string name="txt_bmi_thn">tahun</string>
+    <string name="txt_bmi_tinggi">Tinggi Badan          :</string>
+    <string name="txt_bmi_cm">cm</string>
+    <string name="txt_bmi_berat">Berat Badan           :</string>
+    <string name="txt_bmi_kg">kg</string>
+
+    <string name="txtbutton_bmi_hitung">HITUNG</string>
+    <string name="txtbutton_bmi_reset">RESET</string>
+    <string name="txtbutton_back">BACK TO MAIN</string>
+
+    <string name="title_bmi_hasil">HASIL</string>
+    <string name="hasil_bmi_umur">Umur Anda     : </string>
+    <string name="hasil_bmi_tinggi">Tinggi Badan  : </string>
+    <string name="hasil_bmi_berat">Berat Badan   : </string>
+    <string name="hasil_bmi_bmi">BMI Anda      : </string>
+    <string name="hasil_bmi_kategori">Kategori           : </string>
+
 </resources>

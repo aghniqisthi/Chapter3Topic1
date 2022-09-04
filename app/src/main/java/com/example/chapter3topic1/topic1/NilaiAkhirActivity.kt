@@ -1,9 +1,9 @@
-package com.example.chapter3topic1
+package com.example.chapter3topic1.topic1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_bmi.*
+import com.example.chapter3topic1.R
 import kotlinx.android.synthetic.main.activity_nilai_akhir.*
 import kotlinx.android.synthetic.main.activity_nilai_akhir.btnBack
 import kotlinx.android.synthetic.main.activity_nilai_akhir.btnHitung
@@ -44,20 +44,20 @@ class NilaiAkhirActivity : AppCompatActivity() {
         }
 
         btnBack.setOnClickListener {
-            var pindah = Intent(this, MainActivity ::class.java)
+            val pindah = Intent(this, Topic1MainActivity ::class.java)
             startActivity(pindah)
         }
     }
 
-    fun total(tgs: Double, uts: Double, uas: Double): Double{
+    private fun total(tgs: Double, uts: Double, uas: Double): Double{
         return tgs + uts + uas
     }
 
-    fun rataRata(total:Double): Double{
+    private fun rataRata(total:Double): Double{
         return total/3
     }
 
-    fun seleksiNilai(ratarata:Double):String{
+    private fun seleksiNilai(ratarata:Double):String{
         if(ratarata in 0.0..60.0) return "F"
         else if(ratarata in 61.0..70.0) return "D"
         else if(ratarata in 71.0..80.0) return "C"

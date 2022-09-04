@@ -1,10 +1,10 @@
-package com.example.chapter3topic1
+package com.example.chapter3topic1.topic1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.chapter3topic1.R
 import kotlinx.android.synthetic.main.activity_bmi.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class BmiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,9 +12,9 @@ class BmiActivity : AppCompatActivity() {
         setContentView(R.layout.activity_bmi)
 
         btnHitung.setOnClickListener{
-            var tb = editTextTB.text.toString()
-            var bb = editTextBB.text.toString()
-            var bmi = hitungBMI(bb.toDouble(), tb.toDouble())
+            val tb = editTextTB.text.toString()
+            val bb = editTextBB.text.toString()
+            val bmi = hitungBMI(bb.toDouble(), tb.toDouble())
 
             txtUmur.text = "${editTextUmur.text} tahun"
             txtTB.text = "$tb cm"
@@ -29,18 +29,17 @@ class BmiActivity : AppCompatActivity() {
         }
 
         btnBack.setOnClickListener {
-            var pindah = Intent(this, MainActivity ::class.java)
+            val pindah = Intent(this, Topic1MainActivity ::class.java)
             startActivity(pindah)
         }
     }
 
-    fun hitungBMI(berat: Double, tinggi: Double): Double{
-        var tb = tinggi / 100
-        var bmi = berat / (tb*tb)
-        return bmi
+    private fun hitungBMI(berat: Double, tinggi: Double): Double{
+        val tb = tinggi / 100
+        return berat / (tb*tb)
     }
 
-    fun kategori(bmi: Double):String{
+    private fun kategori(bmi: Double):String{
         val kategori: String
         if (bmi < 16 && bmi > 0) {
             kategori = "Terlalu Kurus"
@@ -63,7 +62,7 @@ class BmiActivity : AppCompatActivity() {
         return kategori
     }
 
-    fun reset(){
+    private fun reset(){
         txtUmur.text = ""
         txtTB.text = ""
         txtBB.text = ""

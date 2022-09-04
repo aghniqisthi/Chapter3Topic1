@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NilaiAkhirActivity">
+    tools:context=".topic1.NilaiAkhirActivity">
 
     <TextView
         android:id="@+id/titleNilai"
@@ -14,7 +14,7 @@
         android:layout_marginHorizontal="50dp"
         android:layout_marginTop="35dp"
         android:fontFamily="monospace"
-        android:text="MENGHITUNG NILAI AKHIR MAHASISWA"
+        android:text="@string/title_topic1_nilai"
         android:textAlignment="center"
         android:textColor="@color/dark_blue"
         android:textSize="24sp"

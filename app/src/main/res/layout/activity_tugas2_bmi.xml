@@ -6,14 +6,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".topic1.BmiActivity">
+    tools:context=".topic2.Tugas2BmiActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="@string/title_topic1_bmi"
+        android:text="KALKULATOR BMI"
         android:textSize="24sp"
         android:textStyle="bold"
         android:fontFamily="monospace"
@@ -42,13 +42,13 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_bmi_umur"
+                android:text="Umur                  :"
                 android:textColor="@color/black"
                 tools:layout_editor_absoluteX="329dp"
                 tools:layout_editor_absoluteY="93dp" />
 
             <EditText
-                android:id="@+id/editTextUmur"
+                android:id="@+id/edittxtUmur"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -62,7 +62,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_bmi_thn"
+                android:text="tahun"
                 android:textColor="@color/black"
                 tools:layout_editor_absoluteX="329dp"
                 tools:layout_editor_absoluteY="93dp" />
@@ -78,13 +78,13 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_bmi_tinggi"
+                android:text="Tinggi Badan    :"
                 android:textColor="@color/black"
                 tools:layout_editor_absoluteX="329dp"
                 tools:layout_editor_absoluteY="93dp" />
 
             <EditText
-                android:id="@+id/editTextTB"
+                android:id="@+id/edittxtTB"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -99,7 +99,7 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="@string/txt_bmi_cm"
+                android:text="cm"
                 tools:layout_editor_absoluteX="329dp"
                 tools:layout_editor_absoluteY="93dp" />
 
@@ -114,14 +114,13 @@
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_bmi_berat"
+                android:text="Berat Badan      :"
                 android:textColor="@color/black"
                 tools:layout_editor_absoluteX="329dp"
                 tools:layout_editor_absoluteY="93dp" />
 
             <EditText
-                android:id="@+id/editTextBB"
-
+                android:id="@+id/edittxtBB"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15dp"
@@ -135,7 +134,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_bmi_kg"
+                android:text="kg"
                 android:textColor="@color/black"
                 tools:layout_editor_absoluteX="329dp"
                 tools:layout_editor_absoluteY="93dp" />
@@ -145,167 +144,86 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnHitung"
+        android:id="@+id/btnResetBMI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/txtbutton_bmi_hitung"
-        android:backgroundTint="@color/cornflower_blue"
-        app:layout_constraintEnd_toStartOf="@+id/btnReset"
-        app:layout_constraintHorizontal_bias="0.71"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:id="@+id/btnReset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/cornflower_blue"
-        android:text="@string/txtbutton_bmi_reset"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.705"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/title_bmi_hasil"
-        android:textColor="@color/dark_blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:fontFamily="monospace"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnHitung" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="225dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <!--        umur -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasil_bmi_umur"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/txtUmur"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-        <!--        tinggi badan -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasil_bmi_tinggi"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/txtTB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-        <!--        berat badan -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasil_bmi_berat"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/txtBB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-        <!--        BMI -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasil_bmi_bmi"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/txtBMI"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-        <!--        kategori -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hasil_bmi_kategori"
-                android:textColor="@color/black" />
-
-            <TextView
-                android:id="@+id/txtKategori"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/pink"
-        android:text=""
+        android:text="RESET"
+        app:layout_constraintEnd_toStartOf="@+id/btnBackBMI"
+        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnParcelable" />
+
+    <Button
+        android:id="@+id/btnBackBMI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/pink"
+        android:text="BACK"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnParcelable" />
+
+    <Button
+        android:id="@+id/btnImplicitIntent"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/cornflower_blue"
+        android:text="IMPLICIT INTENT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btnExplicitIntent"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/cornflower_blue"
+        android:text="EXPLICIT INTENT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnImplicitIntent" />
 
+    <Button
+        android:id="@+id/btnBundle"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/cornflower_blue"
+        android:text="BUNDLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnExplicitIntent" />
+
+    <Button
+        android:id="@+id/btnSerializable"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/cornflower_blue"
+        android:text="SERIALIZABLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBundle" />
+
+    <Button
+        android:id="@+id/btnParcelable"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/cornflower_blue"
+        android:text="PARCELABLE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSerializable" />
 </androidx.constraintlayout.widget.ConstraintLayout>

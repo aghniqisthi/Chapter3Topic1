@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/light_tosca"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".topic1.Topic1MainActivity">
 
     <TextView
         android:id="@+id/judul"
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="224dp"
         android:fontFamily="monospace"
-        android:text="@string/title_main"
+        android:text="@string/title_main_topic1"
         android:textColor="@color/dark_blue"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -22,27 +23,40 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnTopic1"
+        android:id="@+id/btnPenjumlahan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:backgroundTint="@color/dark_blue"
-        android:text="@string/title_main_topic1"
+        android:text="@string/txtbutton_main1_jumlah"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/judul" />
 
     <Button
-        android:id="@+id/btnTopic2"
+        android:id="@+id/btnBMI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/dark_blue"
-        android:text="@string/title_main_topic2"
+        android:text="@string/txtbutton_main1_bmi"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTopic1" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPenjumlahan" />
+
+    <Button
+        android:id="@+id/btnNilaiAkhir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/dark_blue"
+        android:text="@string/txtbutton_main1_nilai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBMI" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

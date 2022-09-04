@@ -3,9 +3,8 @@ package com.example.chapter3topic1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import com.example.chapter3topic1.topic1.Topic1MainActivity
+import com.example.chapter3topic1.topic2.Tugas2BmiActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,18 +12,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnPenjumlahan.setOnClickListener {
-            var pindah = Intent(this, PenjumlahanActivity ::class.java)
+        btnTopic1.setOnClickListener {
+            val pindah = Intent(this, Topic1MainActivity ::class.java)
             startActivity(pindah)
         }
 
-        btnBMI.setOnClickListener{
-            var pindah = Intent(this, BmiActivity ::class.java)
-            startActivity(pindah)
-        }
-
-        btnNilaiAkhir.setOnClickListener{
-            var pindah = Intent(this, NilaiAkhirActivity ::class.java)
+        btnTopic2.setOnClickListener{
+            val pindah = Intent(this, Tugas2BmiActivity ::class.java)
             startActivity(pindah)
         }
     }
