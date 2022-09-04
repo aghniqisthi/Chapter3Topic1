@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.chapter3topic1.MainActivity
 import com.example.chapter3topic1.R
 import kotlinx.android.synthetic.main.activity_bmi.*
 import kotlinx.android.synthetic.main.activity_tugas2_bmi.*
@@ -14,7 +15,7 @@ class Tugas2BmiActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tugas2_bmi)
 
         btnBackBMI.setOnClickListener {
-            val pindah = Intent(this, Tugas2BmiActivity ::class.java)
+            val pindah = Intent(this, MainActivity ::class.java)
             startActivity(pindah)
         }
         btnResetBMI.setOnClickListener{
@@ -47,13 +48,13 @@ class Tugas2BmiActivity : AppCompatActivity() {
         }
     }
 
-    fun implicitIntentBMI(){
+    private fun implicitIntentBMI(){
         val pindah = Intent(Intent.ACTION_VIEW)
         pindah.data = Uri.parse("https://www.calculator.net/bmi-calculator.html")
         startActivity(pindah)
     }
 
-    fun explicitIntentBMI(){
+    private fun explicitIntentBMI(){
         val umur = edittxtUmur.text.toString()
         val tb = edittxtTB.text.toString()
         val bb = edittxtBB.text.toString()
@@ -72,7 +73,7 @@ class Tugas2BmiActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun intentBundleBMI(){
+    private fun intentBundleBMI(){
         val umur = edittxtUmur.text.toString()
         val tb = edittxtTB.text.toString()
         val bb = edittxtBB.text.toString()
@@ -93,7 +94,7 @@ class Tugas2BmiActivity : AppCompatActivity() {
         startActivity(pindah)
     }
 
-    fun serializableBMI(){
+    private fun serializableBMI(){
         val umur = edittxtUmur.text.toString()
         val tb = edittxtTB.text.toString()
         val bb = edittxtBB.text.toString()
@@ -107,7 +108,7 @@ class Tugas2BmiActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun parcelableBMI(){
+    private  fun parcelableBMI(){
         val umur = edittxtUmur.text.toString()
         val tb = edittxtTB.text.toString()
         val bb = edittxtBB.text.toString()

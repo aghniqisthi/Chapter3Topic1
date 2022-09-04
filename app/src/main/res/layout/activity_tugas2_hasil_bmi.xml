@@ -27,7 +27,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Umur Anda     : "
+                android:text="@string/hasil_bmi_umur"
                 android:textColor="@color/black" />
 
             <TextView

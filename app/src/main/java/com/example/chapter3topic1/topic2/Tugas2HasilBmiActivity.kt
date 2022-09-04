@@ -1,11 +1,9 @@
 package com.example.chapter3topic1.topic2
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.chapter3topic1.R
-import com.example.chapter3topic1.topic1.Topic1MainActivity
 import kotlinx.android.synthetic.main.activity_tugas2_hasil_bmi.*
 
 class Tugas2HasilBmiActivity : AppCompatActivity() {
@@ -30,12 +28,12 @@ class Tugas2HasilBmiActivity : AppCompatActivity() {
         }
     }
 
-    fun ambilDataBMIExplicitIntent(){
-        var umur =  intent.getStringExtra("umur")
-        var tb =  intent.getStringExtra("tb")
-        var bb =  intent.getStringExtra("bb")
-        var bmi = intent.getStringExtra("bmi")
-        var kategori = intent.getStringExtra("kategori")
+    private fun ambilDataBMIExplicitIntent(){
+        val umur =  intent.getStringExtra("umur")
+        val tb =  intent.getStringExtra("tb")
+        val bb =  intent.getStringExtra("bb")
+        val bmi = intent.getStringExtra("bmi")
+        val kategori = intent.getStringExtra("kategori")
 
         txtHasilUmur.text = umur
         txtHasilTB.text = tb
@@ -44,8 +42,8 @@ class Tugas2HasilBmiActivity : AppCompatActivity() {
         txtHasilKategori.text = kategori
     }
 
-    fun ambilDataBMIBundle(){
-        var bundle = intent.extras
+    private fun ambilDataBMIBundle(){
+        val bundle = intent.extras
         txtHasilUmur.setText(bundle?.getString("umur"))
         txtHasilTB.setText(bundle?.getString("tb"))
         txtHasilBB.setText(bundle?.getString("bb"))
@@ -53,7 +51,7 @@ class Tugas2HasilBmiActivity : AppCompatActivity() {
         txtHasilKategori.setText(bundle?.getString("kategori"))
     }
 
-    fun ambilDataBMISerializable(){
+    private fun ambilDataBMISerializable(){
         val databmi = intent.getSerializableExtra("databmi") as DataBMISerializable
 
         txtHasilUmur.text = databmi.umur
@@ -63,8 +61,8 @@ class Tugas2HasilBmiActivity : AppCompatActivity() {
         txtHasilKategori.text = databmi.kategori
     }
 
-    fun ambilDataBMIParcelable(){
-        var databmi = intent.getParcelableExtra("databmi") as DataBMIParcelable?
+    private fun ambilDataBMIParcelable(){
+        val databmi = intent.getParcelableExtra("databmi") as DataBMIParcelable?
         txtHasilUmur.text = databmi?.umur
         txtHasilTB.text = databmi?.tb
         txtHasilBB.text = databmi?.bb
